@@ -5,7 +5,7 @@
 		<meta name="viewport"
 			content="width=device-width,user-scalable=no,initial-scale=1.0" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<title>贱人配对</title>
+		<title>美食配对</title>
 		<link type="text/css" href="css/game_base.css" rel="stylesheet" />
 		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
 
@@ -59,15 +59,15 @@
 		window.shareData = {
 		        "imgUrl": "./img/icon.png", //分享朋友圈时的图标
 		        "timeLineLink": "http://game.zuishenghuo.net/?p=199", //分享朋友圈时的URL
-		        "tTitle": "贱人配对", //分享朋友圈时的标题
-		        "tContent": "贱人就是矫情……我配我配我配配配" //分享朋友圈时的内容
+		        "tTitle": "美食配对", //分享朋友圈时的标题
+		        "tContent": "美食就是矫情……我配我配我配配配" //分享朋友圈时的内容
 		};
 				
 		function goHome(){
 			window.location=mebtnopenurl;
 		}
 		function dp_share(){
-			document.title = "瞧瞧！我把"+myscore+"对贱人给办了！贱人配对我最牛，你敢来挑战吗？";
+			document.title = "瞧瞧！我把"+myscore+"对美食给办了！美食配对我最牛，你敢来挑战吗？";
 			document.getElementById("share").style.display="";
 			window.shareData.tTitle = document.title;
 		}
@@ -115,9 +115,9 @@
 			function dp_submitScore(score){
 				myscore=score;
 				myData.score = score;
-				myData.scoreName = score+"对贱人";
+				myData.scoreName = score+"对美食";
 				if(score>5){
-					if (confirm("真行，配成了"+score+"对贱人！要不要通知下小伙伴们呢？")){
+					if (confirm("真行，配成了"+score+"对美食！要不要通知下小伙伴们呢？")){
 						dp_share();
 					}
 				}
