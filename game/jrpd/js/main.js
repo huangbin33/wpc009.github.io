@@ -60,7 +60,7 @@ null == game && (game = {});
 		game.gv.clearCard();
 		game.gv.mouseChildren = !0;
 		for (var a = [], b = 0; 10 > b; b++) {
-			a[2 * b] = a[2 * b + 1] = b % 6 + 1;
+			a[2 * b] = a[2 * b + 1] = b % 10 + 1;
 		}
 		a.shuffle();
 		game.gv.setupCard(a);
@@ -267,7 +267,7 @@ function loadResource() {
 	queue.setMaxConnections(30);
 	loadGameData();
 	queue.on("complete", setup, null, !0);
-	queue.loadManifest({path:RES_DIR + "img/", manifest:[{src:"1.jpg", id:"1"}, {src:"2.jpg", id:"2"}, {src:"3.jpg", id:"3"}, {src:"4.jpg", id:"4"}, {src:"5.jpg", id:"5"}, {src:"6.jpg", id:"6"}, {src:"frame.png", id:"frame"}, {src:"back.png", id:"back"}, {src:"ready.png", id:"ready"}, {src:"go.png", id:"go"}, {src:"bg.png", id:"bg"}, {src:"topline.png", id:"topline"}, {src:"bestscore.png", id:"bestscore"}, {src:"curscore.png", id:"curscore"}, {src:"gameover.png", id:"gameover"}, {src:"replaybtn.png", id:"replaybtn"}, {src:"sharebtn.png", id:"sharebtn"}, {src:"toplistbtn.png", id:"toplistbtn"}]}, !1);
+	queue.loadManifest({path:RES_DIR + "img/", manifest:[{src:"1.jpg", id:"1"}, {src:"2.jpg", id:"2"}, {src:"3.jpg", id:"3"}, {src:"4.jpg", id:"4"}, {src:"5.jpg", id:"5"}, {src:"6.jpg", id:"6"},{src:"7.jpg", id:"7"},{src:"8.jpg", id:"8"},{src:"9.jpg", id:"9"},{src:"10.jpg", id:"10"} ,{src:"frame.png", id:"frame"}, {src:"back.png", id:"back"}, {src:"ready.png", id:"ready"}, {src:"go.png", id:"go"}, {src:"bg.png", id:"bg"}, {src:"topline.png", id:"topline"}, {src:"bestscore.png", id:"bestscore"}, {src:"curscore.png", id:"curscore"}, {src:"gameover.png", id:"gameover"}, {src:"replaybtn.png", id:"replaybtn"}, {src:"sharebtn.png", id:"sharebtn"}, {src:"toplistbtn.png", id:"toplistbtn"}]}, !1);
 	USE_NATIVE_SOUND || (IS_NATIVE_ANDROID ? (createjs.Sound.registMySound("flip", 0), createjs.Sound.registMySound("bonus", 2), createjs.Sound.registMySound("silenttail", 4), queue.loadFile({id:"sound", src:RES_DIR + "audio/all.mp3"})) : (createjs.Sound.alternateExtensions = ["ogg"], queue.installPlugin(createjs.Sound), queue.loadManifest({path:RES_DIR + "audio/", manifest:[{src:"flip.mp3", id:"flip"}, {src:"bonus.mp3", id:"bonus"}]}, !1)));
 	a.forQueue(queue);
 	queue.load();
