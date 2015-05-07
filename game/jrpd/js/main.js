@@ -156,13 +156,16 @@ null == game && (game = {});
 		this.cid = c;
 		this.mouseChildren = !1;
 		a = new createjs.Bitmap(game.qp_a(c));
+		a.scaleX = 130 / a.image.width;
+		a.scaleY = 130 / a.image.height;
+
 		a.name = "bm";
 		var d = new createjs.Bitmap(game.qp_a("back"));
 		d.name = "back";
 		var e = new createjs.Shape;
 		e.name = "frame";
-		e.graphics.beginFill("#888888").drawRect(8, 8, a.getBounds().width + 2, a.getBounds().height + 2).endFill();
-		e.graphics.beginStroke("#888888").setStrokeStyle(10).drawRect(2, 2, a.getBounds().width - 2, a.getBounds().height - 2).endStroke();
+		e.graphics.beginFill("#888888").drawRect(8, 8, 130 + 2, 130 + 2).endFill();
+		e.graphics.beginStroke("#888888").setStrokeStyle(10).drawRect(2, 2, 130 - 2, 130 - 2).endStroke();
 		e.visible = !1;
 		this.regX = d.getBounds().width / 2;
 		this.regY = d.getBounds().height / 2;
